@@ -5,21 +5,25 @@ import axios from "axios";
 const AuthContext = createContext({});
 export const AuthProvider = ({ children }) => {
   const getProduct = () => {
-    return axios.get("http://localhost:3001/getProduct").then((response) => {
-      return response.data.response;
-    });
+    return axios
+      .get("https://ecommerce-backend-topaz-one.vercel.app/getProduct")
+      .then((response) => {
+        return response.data.response;
+      });
   };
   const OneProduct = (id) => {
     return axios
-      .get(`http://localhost:3001/oneProduct/${id}`)
+      .get(`https://ecommerce-backend-topaz-one.vercel.app/oneProduct/${id}`)
       .then((response) => {
         return response.data.response[0];
       });
   };
   const GetBrand = () => {
-    return axios.get("http://localhost:3001/getbrand").then((response) => {
-      return response.data.response;
-    });
+    return axios
+      .get("https://ecommerce-backend-topaz-one.vercel.app/getbrand")
+      .then((response) => {
+        return response.data.response;
+      });
   };
   return (
     <AuthContext.Provider value={{ getProduct, OneProduct, GetBrand }}>

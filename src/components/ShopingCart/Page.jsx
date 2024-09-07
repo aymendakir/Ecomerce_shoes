@@ -105,12 +105,15 @@ function Page() {
     if (!error) {
       try {
         const { id } = paymentMethod;
-        const response = await axios.post("http://localhost:3001/payment", {
-          amount: totalAmount * 100, // Convert to cents for Stripe
-          id,
-          orderDetails: datacart,
-          user: user,
-        });
+        const response = await axios.post(
+          "https://ecommerce-backend-topaz-one.vercel.app/payment",
+          {
+            amount: totalAmount * 100, // Convert to cents for Stripe
+            id,
+            orderDetails: datacart,
+            user: user,
+          }
+        );
 
         if (response.data.success) {
           saveOrder(response.data.order); // Save order in backend
@@ -169,7 +172,7 @@ function Page() {
   const saveOrder = async (orderData) => {
     try {
       const response = await axios
-        .post("http://localhost:3001/order", {
+        .post("https://ecommerce-backend-topaz-one.vercel.app/order", {
           costumer_id: user.id,
 
           total_amount: totalAmount,
