@@ -55,7 +55,7 @@ function MethodPayment({ onclick }) {
               }}
             />
           </li>
-          <li className="border-b rounded-b-xl border-gray-400 py-5 pl-5 capitalize">
+          {/* <li className="border-b rounded-b-xl border-gray-400 py-5 pl-5 capitalize">
             <CheckBox
               value={"Paypal payment"}
               valueChecked={checkbox3Checked}
@@ -63,7 +63,7 @@ function MethodPayment({ onclick }) {
                 handleCheck3(value);
               }}
             />
-          </li>
+          </li> */}
         </ul>
       </div>
     </header>

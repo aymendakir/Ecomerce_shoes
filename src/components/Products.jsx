@@ -15,7 +15,7 @@ function Products() {
   });
   return (
     <section className="w-[95%] min-h-[70vh] mx-auto mt-20 grid grid-cols-4  lg:grid-rows-2 gap-5 max-md:grid-cols-1 max-lg:grid-cols-2 mb-10 items-center justify-items-center justify-center3  ">
-      {productData?.map((index) => {
+      {productData?.slice(0, 8).map((index) => {
         return (
           <Card
             key={index}

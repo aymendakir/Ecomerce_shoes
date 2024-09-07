@@ -9,6 +9,7 @@ import {
 import React from "react";
 import Navigation from "../Navigation";
 import { useNavigate } from "react-router-dom/dist";
+import Loading from "../Loading";
 
 function Login() {
   const { isSignedIn, user, isLoaded } = useUser();
@@ -18,6 +19,7 @@ function Login() {
   }
   return (
     <>
+    <Loading />
       <Navigation />
       <header className="flex items-center justify-center h-[90vh]">
         <SignIn />

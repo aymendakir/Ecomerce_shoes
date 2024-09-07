@@ -8,6 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { useUser } from "@clerk/clerk-react";
 import PriceFilter from "./PriceFilter";
+import Loading from "../Loading";
 
 function Shop() {
   //const { isSignedIn, user, isLoaded } = useUser();
@@ -96,6 +97,7 @@ function Shop() {
   };
   return (
     <section className="w-full overflow-hidden">
+      <Loading />
       <Navigation />
       <header className="h-[70px] w-full"></header>
       <section className="flex  w-full gap-5 mx-5">

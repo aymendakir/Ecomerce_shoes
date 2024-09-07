@@ -15,7 +15,7 @@ const Images = (props) => {
     setSelectedImage(image);
   };
   return (
-    <div className="grid grid-cols-1 w-1/2 max-lg:w-10/12 max-sm:h-3/4 max-sm:w-screen max-sm:mb-[-140px]">
+    <div className="grid grid-cols-1 gap-5 w-1/2 max-lg:w-10/12 max-sm:h-3/4 max-sm:w-screen max-sm:mb-[-140px]">
       <div className="w-[500px] h-[500px] bg-gray-200/20 rounded-lg mt-10 flex items-center justify-center">
         {selectedImage && (
           <img

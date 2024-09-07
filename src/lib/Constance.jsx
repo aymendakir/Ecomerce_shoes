@@ -4,9 +4,4 @@ export const nav = [
   { name: "Men", label: "Men", url: "/shop/men" },
   { name: "Women", label: "Women", url: "/shop/Women" },
 ];
-export const headerProduct = [
-  { name: "model", label: "air zoom doser" },
-  { name: "brand", label: "nike" },
-  { name: "colors", label: "black-red" },
-  { name: "price", label: "1000" },
-];
+

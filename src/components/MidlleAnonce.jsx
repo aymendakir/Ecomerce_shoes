@@ -1,45 +1,84 @@
-import React from "react";
-import shoes from "../assets/images/mencollection.png";
-import shoes2 from "../assets/images/nike-free-nike-air-max-sneakers-shoe-red-shoes-78c3ee1eb5170ce50ef0c55755e33899.png";
-
+import React, { useEffect } from "react";
+import shoes1 from "../assets/images/shoes1.png";
+import shoes2 from "../assets/images/shoes2.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 function Middle() {
+  useEffect(() => {
+    AOS.init({
+      disable: "phone",
+      duration: 700,
+      easing: "ease-out-cubic",
+    });
+  }, []);
   return (
-    <section className=" flex max-lg:flex-col w-[95%] gap-5 mx-auto">
-      <div className="w-[40%] max-lg:w-[100%] max-lg:h-[500px] h-[80vh] bg-gray-200 rounded-xl relative">
-        <div className="ml-10 font-mono mt-5  ">
-          <p className="text-[50px] w-[90%]  capitalize font-bold ">
-            Footwear that Complements Your Every Step
-          </p>
-          <button className="p-2 w-[150px] rounded-xl bg-yellow-300 text-lg ml-10 mt-5 z-10">
-            Show product
-          </button>
+    <div className="flex flex-wrap w-full mb-[-24px]">
+      <div
+        className="min-[992px]:w-[50%] w-full px-[12px] mb-[24px] aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      >
+        <div className="banner-box p-[30px] rounded-[20px] relative overflow-hidden bg-box-color-one bg-[#fbf2e5]">
+          <div className="inner-banner-box relative z-[1] flex justify-between max-[480px]:flex-col">
+            <div className="side-image px-[12px] flex items-center max-[480px]:p-[0] max-[480px]:mb-[12px] max-[480px]:justify-center">
+              <img
+                src={shoes1}
+                alt="one"
+                className="max-w-max w-[280px] h-[280px] max-[1399px]:w-[230px] max-[1399px]:h-[230px] max-[1199px]:w-[140px] max-[1199px]:h-[140px] max-[991px]:w-[280px] max-[991px]:h-[280px] max-[767px]:h-[200px] max-[767px]:w-[200px] max-[575px]:w-full max-[575px]:h-[auto] max-[480px]:w-[calc(100%-70px)]"
+              />
+            </div>
+            <div className="inner-contact max-w-[250px] px-[12px] flex flex-col items-start justify-center max-[480px]:p-[0] max-[480px]:max-w-[100%] max-[480px]:text-center max-[480px]:items-center">
+              <h5 className="font-quicksand mb-[15px] text-[31px] text-[#3d4750] font-bold tracking-[0.03rem] text-[#3d4750] leading-[1.2] max-[991px]:text-[28px] max-[575px]:text-[24px] max-[480px]:mb-[2px] max-[480px]:text-[22px]">
+                Comfort Meets &amp; Style
+              </h5>
+              <p className="font-Poppins text-[16px] font-light leading-[28px] tracking-[0.03rem] text-[#686e7d] mb-[15px] max-[480px]:mb-[8px] max-[480px]:text-[14px]">
+                Discover shoes that fit your lifestyle effortlessly.
+              </p>
+              <Link
+                to={"/shop"}
+                className="bb-btn-1 transition-all duration-[0.3s] ease-in-out font-Poppins leading-[28px] tracking-[0.03rem] py-[5px] px-[15px] text-[14px] font-normal text-[#3d4750] bg-transparent rounded-[10px] border-[1px] border-solid border-[#3d4750] hover:bg-[#6c7fd8] hover:border-[#6c7fd8] hover:text-[#fff]"
+              >
+                Shop Now
+              </Link>
+            </div>
+          </div>
         </div>
-        <span className="absolute w-[300px]  h-[300px] bg-[#e1be219e] rounded-full max-md:right-[5%] max-md:top-[55%] top-[45%] right-[5%] max-md:w-[200px] max-md:h-[200px] "></span>
-        <img
-          src={shoes}
-          alt="shoes"
-          width={350}
-          className="absolute max-md:right-[5%] max-md:top-[55%] top-[45%] right-[5%] max-md:w-[240px]"
-        />
       </div>
-      <div className="md:w-[60%] max-lg:h-[500px] bg-cyan-200 rounded-xl relative">
-        <div className="ml-10 font-mono mt-5  ">
-          <p className="text-[50px] w-[90%]  capitalize font-semibold ">
-            Comfort and Style Combined for You!
-          </p>
-          <button className="p-2 w-[150px] rounded-xl bg-yellow-300 text-lg ml-10 mt-5 z-10">
-            Show product
-          </button>
+      <div
+        className="min-[992px]:w-[50%] w-full px-[12px] mb-[24px] aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      >
+        <div className="banner-box p-[30px] rounded-[20px] relative overflow-hidden bg-box-color-two bg-[#ffe8ee]">
+          <div className="inner-banner-box relative z-[1] flex justify-between max-[480px]:flex-col">
+            <div className="side-image px-[12px] flex items-center max-[480px]:p-[0] max-[480px]:mb-[12px] max-[480px]:justify-center">
+              <img
+                src={shoes2}
+                alt="two"
+                className="max-w-max w-[280px] h-[280px] max-[1399px]:w-[230px] max-[1399px]:h-[230px] max-[1199px]:w-[140px] max-[1199px]:h-[140px] max-[991px]:w-[280px] max-[991px]:h-[280px] max-[767px]:h-[200px] max-[767px]:w-[200px] max-[575px]:w-full max-[575px]:h-[auto] max-[480px]:w-[calc(100%-70px)]"
+              />
+            </div>
+            <div className="inner-contact max-w-[250px] px-[12px] flex flex-col items-start justify-center max-[480px]:p-[0] max-[480px]:max-w-[100%] max-[480px]:text-center max-[480px]:items-center">
+              <h5 className="font-quicksand mb-[15px] text-[31px] text-[#3d4750] font-bold tracking-[0.03rem] text-[#3d4750] leading-[1.2] max-[991px]:text-[28px] max-[575px]:text-[24px] max-[480px]:mb-[2px] max-[480px]:text-[22px]">
+                Step Up &amp; Your Style
+              </h5>
+              <p className="font-Poppins text-[16px] font-light leading-[28px] tracking-[0.03rem] text-[#686e7d] mb-[15px] max-[480px]:mb-[8px] max-[480px]:text-[14px]">
+                Find the perfect pair for every occasion.
+              </p>
+              <Link
+                to={"/shop"}
+                className="bb-btn-1 transition-all duration-[0.3s] ease-in-out font-Poppins leading-[28px] tracking-[0.03rem] py-[5px] px-[15px] text-[14px] font-normal text-[#3d4750] bg-transparent rounded-[10px] border-[1px] border-solid border-[#3d4750] hover:bg-[#6c7fd8] hover:border-[#6c7fd8] hover:text-[#fff]"
+              >
+                Shop Now
+              </Link>
+            </div>
+          </div>
         </div>
-        <span className="absolute w-[300px]  h-[300px] bg-[#214be19e] rounded-full max-md:right-[5%] max-md:top-[55%] top-[45%] right-[5%] max-md:w-[200px] max-md:h-[200px] "></span>
-        <img
-          src={shoes2}
-          alt="shoes"
-          width={550}
-          className="absolute max-md:right-[5%] max-md:top-[55%] top-[21%] right-[5%] max-md:w-[240px]"
-        />
       </div>
-    </section>
+    </div>
   );
 }
 

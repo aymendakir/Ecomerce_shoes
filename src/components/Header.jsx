@@ -1,8 +1,9 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import React, { useState } from "react";
-import nike from "../assets/images/nike-free-nike-air-max-sneakers-shoe-red-shoes-78c3ee1eb5170ce50ef0c55755e33899.png";
-import { headerProduct } from "../lib/Constance";
+import shoes1 from "../assets/images/pngwing.com (4).png";
+import shoes2 from "../assets/images/pngwing.com (5).png";
 import "../assets/fonts/BebasNeue-Regular.ttf";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [x, setX] = useState(1);
@@ -16,39 +17,40 @@ function Header() {
         <div className="flex  justify-center items-center h-1/2 mt-32 ">
           <div className="w-[370px] flex-col">
             <h1 className="text-[50px] uppercase font-semibold header">
-              Nike air zoom 1 rep coral
+              AIR JORDAN 3 Retro 88
             </h1>
-            <button className="w-[150px] flex gap-1 bg-black rounded-full p-2 mt-2 items-center justify-center ">
-              <span className="font-semibold text-xl text-white capitalize ">
-                shop now
-              </span>{" "}
-              <ArrowRight className="text-white" />
-            </button>
+            <Link className="bb-btn-1 transition-all duration-[0.3s] ease-in-out font-Poppins leading-[28px] tracking-[0.03rem] py-[8px] px-[20px] text-[14px] font-normal text-[#3d4750] bg-transparent rounded-[10px] border-[1px] border-solid border-[#3d4750] max-[1199px]:py-[3px] max-[1199px]:px-[15px] hover:bg-[#6c7fd8] hover:border-[#6c7fd8] hover:text-[#fff] mt-10">
+              Shop Now
+            </Link>
           </div>
           <div className="">
             <img
-              src={
-                "https://res.cloudinary.com/dfqlgqnft/image/upload/f_webp/f_auto,q_auto/v1/products/lv7t5zl7am9zdllc17wg"
-              }
+              src={shoes1}
               alt="nike"
               title="nike"
               className="-mt-20"
-              width={800}
+              width={700}
               loading="lazy"
             />
           </div>
         </div>
         <div className="relative w-[90%] mx-auto h-1/2 after:absolute after:-top-10 after:left-[10%] after:bg-black/30 after:h-0.5 after:w-[80%] flex justify-around  gap-5 mt-16 ">
-          {headerProduct.map((index) => (
-            <div key={index} id="model">
-              <h5 className="capitalize text-black font-bold text-xl">
-                {index.name}
-              </h5>
-              <span>
-                {index.label} {index.name === "price" ? "USD" : ""}
-              </span>
-            </div>
-          ))}
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">model</h5>
+            <span>AIR JORDAN </span>
+          </div>
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">Brand</h5>
+            <span>Nike </span>
+          </div>
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">Price</h5>
+            <span>$79</span>
+          </div>
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">color</h5>
+            <span>White </span>
+          </div>
         </div>
         <button
           className="rounded-lg h-[40px] w-[40px] bg-black absolute right-20 bottom-5 flex items-center justify-center"
@@ -61,7 +63,7 @@ function Header() {
           <ArrowLeft className="text-white" />
         </button>
         <button
-          className="rounded-lg h-[40px] w-[40px] bg-black absolute right-0 bottom-5 flex items-center justify-center"
+          className="rounded-lg h-[40px] w-[40px] bg-black absolute right-5 bottom-5 flex items-center justify-center"
           onClick={() => {
             if (x <= 2500) {
               setX(x + 2500);
@@ -79,20 +81,15 @@ function Header() {
         <div className="flex  justify-center items-center h-1/2 mt-32 ">
           <div className="w-[370px] flex-col">
             <h1 className="text-[50px] uppercase font-semibold">
-              Nike air zoom super rep coral
+              Air Jordan 1 Reverse
             </h1>
-            <button className="w-[150px] flex gap-1 bg-black rounded-full p-2 mt-2 items-center justify-center ">
-              <span className="font-semibold text-xl text-white capitalize ">
-                shop now
-              </span>{" "}
-              <ArrowRight className="text-white" />
-            </button>
+            <Link className="bb-btn-1 transition-all duration-[0.3s] ease-in-out font-Poppins leading-[28px] tracking-[0.03rem] py-[8px] px-[20px] text-[14px] font-normal text-[#3d4750] bg-transparent rounded-[10px] border-[1px] border-solid border-[#3d4750] max-[1199px]:py-[3px] max-[1199px]:px-[15px] hover:bg-[#6c7fd8] hover:border-[#6c7fd8] hover:text-[#fff] mt-10">
+              Shop Now
+            </Link>
           </div>
           <div className="">
             <img
-              src={
-                "https://res.cloudinary.com/dfqlgqnft/image/upload/f_webp/f_auto,q_auto/v1/products/lv7t5zl7am9zdllc17wg"
-              }
+              src={shoes2}
               alt="nike"
               title="nike"
               className="-mt-20"
@@ -102,16 +99,22 @@ function Header() {
           </div>
         </div>
         <div className="relative w-[90%] mx-auto h-1/2 after:absolute after:-top-10 after:left-[10%] after:bg-black/30 after:h-0.5 after:w-[80%] flex justify-around  gap-5 mt-16 ">
-          {headerProduct.map((index) => (
-            <div key={index} id="model">
-              <h5 className="capitalize text-black font-bold text-xl">
-                {index.name}
-              </h5>
-              <span>
-                {index.label} {index.name === "price" ? "USD" : ""}
-              </span>
-            </div>
-          ))}
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">model</h5>
+            <span>AIR JORDAN </span>
+          </div>
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">Brand</h5>
+            <span>Nike </span>
+          </div>
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">Price</h5>
+            <span>$79 </span>
+          </div>
+          <div id="model">
+            <h5 className="capitalize text-black font-bold text-xl">color</h5>
+            <span>Blue </span>
+          </div>
         </div>
         <button
           className="rounded-lg h-[40px] w-[40px] bg-black absolute right-20 bottom-5 flex items-center justify-center"
@@ -124,7 +127,7 @@ function Header() {
           <ArrowLeft className="text-white" />
         </button>
         <button
-          className="rounded-lg h-[40px] w-[40px] bg-black absolute right-0 bottom-5 flex items-center justify-center"
+          className="rounded-lg h-[40px] w-[40px] bg-black absolute right-5 bottom-5 flex items-center justify-center"
           onClick={() => {
             if (x <= 2500) {
               setX(x + 2500);

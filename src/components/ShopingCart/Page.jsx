@@ -28,6 +28,9 @@ import {
 import axios from "axios";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import { Loader } from "lucide-react";
+import Loading from "../Loading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const formSchema = z.object({
   city: z.string().min(2, { message: "City must be at least 2 characters." }),
@@ -45,10 +48,16 @@ const formSchema = z.object({
 });
 
 function Page() {
+  const notify = () => toast("Wow Login and try Again!");
   const { isSignedIn, user } = useUser();
-  if (!isSignedIn) {
-    window.location.href = "/";
-  }
+  useEffect(() => {
+    if (!isSignedIn) {
+      notify();
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 900);
+    }
+  }, [isSignedIn, user]);
   const navigate = useNavigate();
   const [datacart, setDatacart] = useState([]);
   const [valuePayment, setvaluePayment] = useState("");
@@ -208,10 +217,15 @@ function Page() {
     if (valuePayment === "card payment") {
       await handleStripePayment();
     }
+    if (valuePayment === "payment delivery") {
+      await saveOrder("payment delivery");
+    }
   };
 
   return (
     <header className="my-4">
+      <Loading />
+      <ToastContainer />
       <Navigation />
       <section>
         <div className="w-[90%] flex justify-between mx-auto mt-20 gap-20">
