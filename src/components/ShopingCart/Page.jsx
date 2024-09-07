@@ -47,6 +47,9 @@ const formSchema = z.object({
 
 function Page() {
   const { isSignedIn, user } = useUser();
+  if (!isSignedIn) {
+    window.location.href = "/";
+  }
   const navigate = useNavigate();
   const [datacart, setDatacart] = useState([]);
   const [valuePayment, setvaluePayment] = useState("");

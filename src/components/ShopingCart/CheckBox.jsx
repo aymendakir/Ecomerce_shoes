@@ -1,5 +1,3 @@
-import { Check } from "lucide-react";
-import { Span } from "next/dist/trace";
 import React, { useEffect, useState } from "react";
 
 function CheckBox({ value, handleCheck, valueChecked }) {
