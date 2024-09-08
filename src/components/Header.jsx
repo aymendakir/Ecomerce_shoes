@@ -4,6 +4,7 @@ import shoes1 from "../assets/images/pngwing.com (4).png";
 import shoes2 from "../assets/images/pngwing.com (5).png";
 import "../assets/fonts/BebasNeue-Regular.ttf";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Header() {
   const [x, setX] = useState(1);
@@ -24,8 +25,10 @@ function Header() {
             </Link>
           </div>
           <div className="">
-            <img
-              src={shoes1}
+            <LazyLoadImage
+              src={
+                "https://res.cloudinary.com/dfqlgqnft/image/upload/f_auto,q_auto/n3p99tojxnypenv4if2y"
+              }
               alt="nike"
               title="nike"
               className="-mt-20"
@@ -88,8 +91,10 @@ function Header() {
             </Link>
           </div>
           <div className="">
-            <img
-              src={shoes2}
+            <LazyLoadImage
+              src={
+                "https://res.cloudinary.com/dfqlgqnft/image/upload/f_auto,q_auto/doxcwyeqnhtdnu39ivox"
+              }
               alt="nike"
               title="nike"
               className="-mt-20"

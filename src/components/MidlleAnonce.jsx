@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import shoes1 from "../assets/images/shoes1.png";
-import shoes2 from "../assets/images/shoes2.png";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
@@ -24,7 +23,9 @@ function Middle() {
           <div className="inner-banner-box relative z-[1] flex justify-between max-[480px]:flex-col">
             <div className="side-image px-[12px] flex items-center max-[480px]:p-[0] max-[480px]:mb-[12px] max-[480px]:justify-center">
               <img
-                src={shoes1}
+                src={
+                  "https://res.cloudinary.com/dfqlgqnft/image/upload/f_auto,q_auto/xtz3fh50jeeat0ijqsib"
+                }
                 alt="one"
                 className="max-w-max w-[280px] h-[280px] max-[1399px]:w-[230px] max-[1399px]:h-[230px] max-[1199px]:w-[140px] max-[1199px]:h-[140px] max-[991px]:w-[280px] max-[991px]:h-[280px] max-[767px]:h-[200px] max-[767px]:w-[200px] max-[575px]:w-full max-[575px]:h-[auto] max-[480px]:w-[calc(100%-70px)]"
               />
@@ -56,7 +57,9 @@ function Middle() {
           <div className="inner-banner-box relative z-[1] flex justify-between max-[480px]:flex-col">
             <div className="side-image px-[12px] flex items-center max-[480px]:p-[0] max-[480px]:mb-[12px] max-[480px]:justify-center">
               <img
-                src={shoes2}
+                src={
+                  "https://res.cloudinary.com/dfqlgqnft/image/upload/f_auto,q_auto/z4hsduo0eg2kawwqvc14"
+                }
                 alt="two"
                 className="max-w-max w-[280px] h-[280px] max-[1399px]:w-[230px] max-[1399px]:h-[230px] max-[1199px]:w-[140px] max-[1199px]:h-[140px] max-[991px]:w-[280px] max-[991px]:h-[280px] max-[767px]:h-[200px] max-[767px]:w-[200px] max-[575px]:w-full max-[575px]:h-[auto] max-[480px]:w-[calc(100%-70px)]"
               />
