@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ShoppingBag } from "lucide-react";
 import Heart from "react-animated-heart";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Card(props) {
   const [dataCart, setDataCart] = useState([]);
@@ -48,7 +49,7 @@ function Card(props) {
         className="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-xl"
         to={`/shop/product/${props.id}`}
       >
-        <img
+        <LazyLoadImage
           className="object-cover w-full"
           src={props?.media}
           alt="product image"
