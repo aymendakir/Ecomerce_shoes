@@ -16,6 +16,9 @@ function Loading() {
     } else {
       window.addEventListener("load", handleLoad);
     }
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 7000);
 
     return () => {
       window.removeEventListener("load", handleLoad);
