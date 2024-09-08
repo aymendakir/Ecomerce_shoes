@@ -56,6 +56,7 @@ function Header() {
           </div>
         </div>
         <button
+          name="previous"
           className="rounded-lg h-[40px] w-[40px] bg-black absolute right-20 bottom-5 flex items-center justify-center"
           onClick={() => {
             if (x >= 2500) {
@@ -66,6 +67,7 @@ function Header() {
           <ArrowLeft className="text-white" />
         </button>
         <button
+          name="next"
           className="rounded-lg h-[40px] w-[40px] bg-black absolute right-5 bottom-5 flex items-center justify-center"
           onClick={() => {
             if (x <= 2500) {
@@ -122,6 +124,7 @@ function Header() {
           </div>
         </div>
         <button
+          name="previous"
           className="rounded-lg h-[40px] w-[40px] bg-black absolute right-20 bottom-5 flex items-center justify-center"
           onClick={() => {
             if (x >= 2500) {
@@ -132,6 +135,7 @@ function Header() {
           <ArrowLeft className="text-white" />
         </button>
         <button
+          name="next"
           className="rounded-lg h-[40px] w-[40px] bg-black absolute right-5 bottom-5 flex items-center justify-center"
           onClick={() => {
             if (x <= 2500) {

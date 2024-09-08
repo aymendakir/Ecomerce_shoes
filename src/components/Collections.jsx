@@ -11,6 +11,8 @@ function Collections() {
           src={
             "https://res.cloudinary.com/dfqlgqnft/image/upload/f_auto,q_auto/qqs7ijjuj2l1earsjm24"
           }
+          alt="shop"
+
           className="scale-110 absolute -top-10 max-md:w-[400px]"
         />
         <h5 className="capitalize text-xl font-medium mb-5">new collection</h5>
@@ -24,6 +26,8 @@ function Collections() {
           src={
             "https://res.cloudinary.com/dfqlgqnft/image/upload/f_auto,q_auto/yhmx9qkz8ha71vylmbge"
           }
+          alt="women"
+
           className="-rotate-[30deg] scale-110 absolute -top-10 max-md:w-[400px]"
         />
         <h5 className="capitalize text-xl font-medium mb-5">for Women</h5>
@@ -41,6 +45,7 @@ function Collections() {
           }
           className=" absolute -top-16 max-md:w-[300px]"
           width={270}
+          alt="men"
         />
         <h5 className="capitalize text-xl font-medium mb-5">for men</h5>
         <Link to={"/shop/men"}>
