@@ -1,7 +1,6 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import React, { useState } from "react";
-import shoes1 from "../assets/images/pngwing.com (4).png";
-import shoes2 from "../assets/images/pngwing.com (5).png";
+
 import "../assets/fonts/BebasNeue-Regular.ttf";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
